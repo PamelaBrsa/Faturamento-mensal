@@ -1,0 +1,10 @@
+#Faturamento Mensal
+estados = [['SP', 67.836,43],['RJ', 36.678,66],['MG', 29.229,88],['ES', 27.165,48], ['Outros', 19.849,53]]
+print(f'Valor detalhado de faturamento mensal:{estados}')
+
+total =  sum([item[1] for item in estados])
+print(f'O total de faturamento mensal da distribuidora foi de: R${total:.3f}')
+
+for p in estados:
+    porcentagem = (p[1]/total) * 100
+    print(f'O percentual de faturamento de {p[0]} foi de {porcentagem:.2f}%.')
